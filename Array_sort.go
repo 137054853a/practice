@@ -8,7 +8,7 @@ import (
 )
 
 func main() {
-	ff := generateArr(10, 200)
+	ff := GenerateArr(10, 200)
 	fmt.Printf("%v,%d\n", ff, len(ff))
 	dd := bubbleSort(ff)
 	fmt.Printf("%v,%d\n", dd, len(dd))
@@ -22,7 +22,7 @@ func main() {
  * @param scope 随机数范围
  * @return
  **/
-func generateArr(maxNum, scope int) []int {
+func GenerateArr(maxNum, scope int) []int {
 	var arr = make([]int, 0)
 	rand.Seed(time.Now().UnixNano()) //使用时间纳秒作为随机种子
 	for i := 1; i <= maxNum; i++ {
